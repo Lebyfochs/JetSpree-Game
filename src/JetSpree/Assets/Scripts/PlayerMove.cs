@@ -7,18 +7,25 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float playerSpeed;
     [SerializeField] private float playerRotation;
     [SerializeField] private Rigidbody rb;
+   
+
     
 
     // Start is called before the first frame update
     void Start()
     {
-        playerSpeed = 80.0f;
-        playerRotation = 40.0f;
+        playerSpeed = 90.0f;
+        playerRotation = 0.35f;
+        rb = GetComponent<Rigidbody>();
     }
+
+    
 
     // Update is called once per frame
     void Update()
     {
+        float h = Input.GetAxis("Horizontal") * playerRotation * Time.deltaTime;
+
         if (Input.GetKey(KeyCode.W))
         {
             //This moves it forward in the direction of the rotation.
@@ -26,18 +33,28 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
-            //Despite saying forward it does move it back thanks to minus.
+            
             rb.AddForce(playerSpeed * Time.deltaTime * -transform.forward);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0.0f, -playerRotation * Time.deltaTime, 0.0f, Space.World);
+            //transform.Rotate(0.0f, -playerRotation * Time.deltaTime, 0.0f, Space.World);
+
+            //Using torque to make the turning feel more 'weighty' and less instant.
+            rb.AddTorque(0.0f, -playerRotation, 0.0f, ForceMode.Acceleration);
+
+
+
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0.0f, playerRotation * Time.deltaTime, 0.0f, Space.World);
+            //transform.Rotate(0.0f, playerRotation * Time.deltaTime, 0.0f, Space.World);
+            rb.AddTorque(0.0f, playerRotation, 0.0f, ForceMode.Acceleration);
+
         }
 
-        
+
+
+
     }
 }

@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 0
+  playerRotation: 0
   rb: {fileID: 1449495079}
 --- !u!54 &1449495079
 Rigidbody:
