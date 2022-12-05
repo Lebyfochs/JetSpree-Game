@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float playerSpeed;
+    [SerializeField] private float playerRotation;
     [SerializeField] private Rigidbody rb;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        playerSpeed = 40.0f;
+        playerSpeed = 80.0f;
+        playerRotation = 40.0f;
     }
 
     // Update is called once per frame
@@ -29,11 +31,11 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0.0f, -60f * Time.deltaTime, 0.0f, Space.World);
+            transform.Rotate(0.0f, -playerRotation * Time.deltaTime, 0.0f, Space.World);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0.0f, 60f * Time.deltaTime, 0.0f, Space.World);
+            transform.Rotate(0.0f, playerRotation * Time.deltaTime, 0.0f, Space.World);
         }
 
         
