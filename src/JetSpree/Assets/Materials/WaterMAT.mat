@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WaterMAT
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 37aa7df78e303f347b093bb75a68754d, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -22,6 +22,10 @@ Material:
     m_TexEnvs:
     - _BumpMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DerivHeightMap:
+        m_Texture: {fileID: 2800000, guid: 801206f6dbf682e4ea1d9314b29c5786, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,8 +44,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FlowMap:
+        m_Texture: {fileID: 2800000, guid: 0064b4ecb5b3a934db4f718a473f38c7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d3290ab47a8a908428a47480c74a55d5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -62,19 +70,30 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FlowOffset: -0.4
+    - _FlowStrength: 0.11
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.336
     - _GlossyReflections: 1
+    - _HeightScale: 0.3
+    - _HeightScaleModulated: 4.27
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 0.5
     - _SrcBlend: 1
+    - _Tiling: 10.64
+    - _UJump: 0.095
     - _UVSec: 0
+    - _VJump: -0.133
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.3215112, g: 0.8018868, b: 0.7304199, a: 1}
+    - _Color: {r: 0.026210396, g: 0.1792453, b: 0.15837689, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _WaveA: {r: 1, g: 1, b: 0.07, a: 5}
+    - _WaveB: {r: 0.98, g: 1, b: 0.1, a: 10}
+    - _WaveC: {r: 0.83, g: 0.21, b: 0.03, a: 20}
   m_BuildTextureStacks: []
