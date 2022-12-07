@@ -14,7 +14,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerSpeed = 90.0f;
+        playerSpeed = 210.0f;
         playerRotation = 0.35f;
         rb = GetComponent<Rigidbody>();
     }

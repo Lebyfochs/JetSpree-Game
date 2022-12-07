@@ -9,8 +9,8 @@ public class WaveManage : MonoBehaviour
 {
     public static WaveManage instance;
 
-    [SerializeField] private float amplitude = 3.0f;
-    [SerializeField] private float waveLength = 5.0f;
+    [SerializeField] private float amplitude = 2.0f;
+    [SerializeField] private float waveLength = 2.0f;
     [SerializeField] private float waveSpeed = 1.0f;
     [SerializeField] private float offSet = 0.0f;
 

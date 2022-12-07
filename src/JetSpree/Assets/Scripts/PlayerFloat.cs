@@ -12,14 +12,17 @@ public class PlayerFloat : MonoBehaviour
   
     private void FixedUpdate()
     {
+       
         //Gets the height of the waves.
         float waveHeight = WaveManage.instance.getWaveHeight(transform.position.x);
 
         //Add force to bounce the boat back to the surface if under the wave height.
-        if (transform.position.y < waveHeight)
+        //WAS WAVEHEIGHT, CHANGED BACK TO 0 SINCE THE WAVE PLANE DOES NOT MOVE.
+        if (transform.position.y <= 0.0f)
         {
             float displaceMultiply = Mathf.Clamp01((waveHeight - transform.position.y) / depthBeforeSubmerged) * displacement;
             rb.AddForceAtPosition(new Vector3(0.0f, Mathf.Abs(Physics.gravity.y) * displaceMultiply, 0.0f), transform.position, ForceMode.Acceleration);
+           
             
         }
     }
