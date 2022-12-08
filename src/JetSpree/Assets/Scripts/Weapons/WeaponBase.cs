@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponBase : MonoBehaviour
+public abstract class WeaponBase : MonoBehaviour
 {
 
     //Base script for weapons to inherit from.
