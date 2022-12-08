@@ -7,9 +7,11 @@ public abstract class WeaponBase : MonoBehaviour
 
     //Base script for weapons to inherit from.
 
+
     //Point of fire and the bullet's prefab.
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private GameObject shotPrefab;
+    //Kept public for now, may change later.
+     public Transform firePoint;
+     public GameObject shotPrefab;
 
 
     private float coolDown;
@@ -18,5 +20,20 @@ public abstract class WeaponBase : MonoBehaviour
     public virtual void Shoot()
     {
 
+    }
+
+    //Properties.
+    //Getter and Setter for allowing access to private variable.
+    public float CoolDown
+    {
+        get
+        {
+            return coolDown;
+        }
+
+        set
+        {
+            coolDown = value;
+        }
     }
 }
