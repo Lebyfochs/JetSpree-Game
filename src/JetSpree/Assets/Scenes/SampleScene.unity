@@ -422,12 +422,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896561745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.007, y: 0.11, z: 4.59}
-  m_LocalScale: {x: 2, y: 2, z: 20}
+  m_LocalPosition: {x: -0.13, y: 0.2700019, z: 0.5815001}
+  m_LocalScale: {x: 20, y: 20, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1408123001}
-  m_RootOrder: 1
+  m_Father: {fileID: 1911004234}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -623,6 +623,8 @@ GameObject:
   - component: {fileID: 1408123003}
   - component: {fileID: 1408123002}
   - component: {fileID: 1408123005}
+  - component: {fileID: 1408123007}
+  - component: {fileID: 1408123006}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -643,7 +645,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1911004234}
-  - {fileID: 896561746}
   m_Father: {fileID: 1449495077}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -724,6 +725,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 0
   player: {fileID: 1408123001}
+--- !u!114 &1408123006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408123000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87eaff89ab95cf34dad6d6f3ff348887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownCounter: 0
+--- !u!114 &1408123007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408123000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75e74a562048b540ab25c9e959a78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 896561746}
+  shotPrefab: {fileID: 594242054028517814, guid: fd54294201cdf4840b7180b24df02cc4, type: 3}
 --- !u!1 &1449495072
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,8 +767,6 @@ GameObject:
   - component: {fileID: 1449495078}
   - component: {fileID: 1449495079}
   - component: {fileID: 1449495080}
-  - component: {fileID: 1449495082}
-  - component: {fileID: 1449495081}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Untagged
@@ -875,33 +901,6 @@ MonoBehaviour:
   rb: {fileID: 1449495079}
   depthBeforeSubmerged: 1
   displacement: 3
---- !u!114 &1449495081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449495072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87eaff89ab95cf34dad6d6f3ff348887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownCounter: 0
---- !u!114 &1449495082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449495072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75e74a562048b540ab25c9e959a78eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 896561746}
-  shotPrefab: {fileID: 594242054028517814, guid: fd54294201cdf4840b7180b24df02cc4, type: 3}
 --- !u!1 &1707816125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1046,8 @@ Transform:
   m_LocalPosition: {x: 0.02, y: 0.082999945, z: 2.2640002}
   m_LocalScale: {x: 0.1, y: 0.1, z: 4}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 896561746}
   m_Father: {fileID: 1408123001}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
