@@ -17,9 +17,10 @@ public abstract class WeaponBase : MonoBehaviour
     private float coolDown;
     private float coolDownCounter;
 
-    public virtual void Shoot()
+    //Function
+    public virtual void Fire()
     {
-
+        
     }
 
     //Properties.

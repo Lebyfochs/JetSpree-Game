@@ -5,26 +5,16 @@ using UnityEngine;
 public class Cannon : WeaponBase
 {
     //Main default weapon of choice.
-
     public Cannon()
     {
-        CoolDown = 10.0f;
+        CoolDown = 2.0f;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public override void Fire()
     {
-        
-    }
+        Instantiate(shotPrefab, firePoint.position, firePoint.rotation);
 
-    public override void Shoot()
-    {
-        
+        base.Fire();
     }
 }
