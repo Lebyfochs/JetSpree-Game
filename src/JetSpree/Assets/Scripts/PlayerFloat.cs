@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFloat : MonoBehaviour
+public class PlayerFloat : PlayerMain
 {
     //Class allows player to float on water.
 
