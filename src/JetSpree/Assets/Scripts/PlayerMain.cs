@@ -5,19 +5,24 @@ using UnityEngine;
 public class PlayerMain : MonoBehaviour
 {
 
-    enum States{CAPTURING, LOADING, LOADED}
+    //Used as de-facto 'state machine'
+    //NORMAL is anything that does not involve capturing islands, may be changed later.
+    //Written like this for testing purposes.
+    public enum States{NORMAL, CAPTURING, LOADING, LOADED}
+    public States currentState;
 
-
-    
+    //Change State function?
 
     void Start()
     {
-        States currentState;
+        
+
+        currentState = States.NORMAL;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(currentState);
     }
 }

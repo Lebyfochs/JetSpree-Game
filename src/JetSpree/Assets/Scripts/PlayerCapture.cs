@@ -15,4 +15,15 @@ public class PlayerCapture : PlayerMain
     {
         
     }
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "CaptureCollider")
+        {
+            //CHANGE TO 'CAPTURING' STATE.
+            currentState = PlayerMain.States.CAPTURING;
+            Debug.Log(currentState);
+        }
+    }
 }

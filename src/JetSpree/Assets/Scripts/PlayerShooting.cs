@@ -33,7 +33,6 @@ public class PlayerShooting : PlayerMain
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            Debug.Log("Shoot!");
 
             if(cannon != null && cooldownCounter >= cannon.CoolDown)
             {
