@@ -25,4 +25,10 @@ public class PlayerMain : MonoBehaviour
     {
         Debug.Log(currentState);
     }
+
+
+    public void changeState(States newState)
+    {
+        currentState = newState;
+    }
 }

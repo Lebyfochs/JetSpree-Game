@@ -17,13 +17,15 @@ public class PlayerCapture : PlayerMain
     }
 
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
-        if (other.name == "CaptureCollider")
+        if (other.CompareTag("CaptureZone"))
         {
             //CHANGE TO 'CAPTURING' STATE.
-            currentState = PlayerMain.States.CAPTURING;
+            changeState(States.CAPTURING);
             Debug.Log(currentState);
         }
     }
+
+   
 }
